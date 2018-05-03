@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "key": 1,
+        "name": "Bilbo",
+        "image": "../images/bilbo.jpg",
+        "clicked": false
+    },
+    {
+        "id": 2,
+        "key": 2,
+        "name": "Brian",
+        "image": "../images/brian.jpg",
+        "clicked": false
+    },
+    {
+        "id": 3,
+        "key": 3,
+        "name": "Colin",
+        "image": "../images/colin.jpg",
+        "clicked": false
+    },
+    {
+        "id": 4,
+        "key": 4,
+        "name": "Daisy",
+        "image": "../images/daisy.jpg",
+        "clicked": false
+    },
+    {
+        "id": 5,
+        "key": 5,
+        "name": "Duane",
+        "image": "../images/duane.png",
+        "clicked": false
+    },
+    {
+        "id": 6,
+        "key": 6,
+        "name": "Marsha",
+        "image": "../images/marsha.jpg",
+        "clicked": false
+    },
+    {
+        "id": 7,
+        "key": 7,
+        "name": "Mike",
+        "image": "../images/mike.gif",
+        "clicked": false
+    },
+    {
+        "id": 8,
+        "key": 8,
+        "name": "Richard",
+        "image": "../images/richard.jpg",
+        "clicked": false
+    },
+    {
+        "id": 9,
+        "key": 9,
+        "name": "Sarah",
+        "image": "../images/sarah.jpg",
+        "clicked": false
+    },
+    {
+        "id": 10,
+        "key": 10,
+        "name": "Tim",
+        "image": "../images/tim.jpg",
+        "clicked": false
+    },
+    {
+        "id": 11,
+        "key": 11,
+        "name": "Twist",
+        "image": "../images/Twist.jpg",
+        "clicked": false
+    },
+    {
+        "id": 12,
+        "key": 12,
+        "name": "tyres",
+        "image": "../images/tyres.jpg",
+        "clicked": false
+    }
+]
