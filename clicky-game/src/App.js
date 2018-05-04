@@ -1,35 +1,48 @@
 import React, { Component } from 'react';
 import Header from "./components/header"
-import Wrapper from "./components/wrapper"
-import spacedChars from "./spacedChars.json"
-import charProf from "./components/charProf"
+import GameBoard from "./components/gameBoard"
+
 
 class App extends Component {
   state = {
     score: 0,
     topScore: 0,
-    spacedChar: spacedChars
+    // spacedChar: spacedChars
   }
 
+  handleGameOver = () => {
+    console.log("game over")
+
+  }
   //need function to change score
-  //need function to change the characters' props
+  incrementScore = () => {
+    let {score, topScore} = this.state;
+    score = score +1;
+    console.log("using incrementScore")
+    this.setState({score: score})
+    if (score > topScore) {
+      this.setState({topScore: score})
+    }
+  }
+  //need function to keep topScore
 
   render() {
     return (
       <div className="App">
-        <Header 
+      <Header
+      currentScore={this.state.score}
+      topScore={this.state.topScore}/>
+
+        {/* <Header 
           currentScore={this.state.score}
           topScore={this.state.topScore}
-        />
-        <Wrapper>
-          {this.state.spacedChar.map(character => (
-          <charProf
-            clickedOn={this.clickedOn}
-            id={spacedChars.id}
-            //need moar props
-        />
-        ))}
-      </Wrapper>
+        /> */}
+        <GameBoard
+          gameOver={this.handleGameOver}
+          incrementScore={() => this.incrementScore()}
+          />
+        
+      
       </div>
     );
   }
