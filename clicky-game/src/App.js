@@ -9,17 +9,18 @@ class App extends Component {
     topScore: 0,
     // spacedChar: spacedChars
   }
-
+  
   handleGameOver = () => {
-    console.log("game over")
-
+    this.setState({score: 0})
   }
+
   //need function to change score
   incrementScore = () => {
     let {score, topScore} = this.state;
     score = score +1;
-    console.log("using incrementScore")
+    // onsole.log("using incrementScore")
     this.setState({score: score})
+    
     if (score > topScore) {
       this.setState({topScore: score})
     }
@@ -29,20 +30,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <Header
-      currentScore={this.state.score}
-      topScore={this.state.topScore}/>
-
+        <Header
+          currentScore={this.state.score}
+          topScore={this.state.topScore}/>
         {/* <Header 
           currentScore={this.state.score}
           topScore={this.state.topScore}
         /> */}
         <GameBoard
-          gameOver={this.handleGameOver}
+          gameOver={() => this.handleGameOver()}
           incrementScore={() => this.incrementScore()}
           />
-        
-      
       </div>
     );
   }

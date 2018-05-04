@@ -1,7 +1,10 @@
+body {
+    background-color: aquamarine;
+}
 
 .photo {
     padding: 10px;
-    height: 100px;
+    height: 200px;
     width: 100px;
     
 }

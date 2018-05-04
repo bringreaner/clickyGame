@@ -15,30 +15,31 @@ class GameBoard extends Component {
             [a[i], a[j]] = [a[j], a[i]];
         }
         this.setState({spacedChars: a})
-        this.props.incrementScore();
     }
 
-        //need shuffling logic - in board
-
-        //need function to change the update if it was clicked on
-
-        //onclick for card logic should be in card itself
-    
-    // componentDidMount() {
-    //     this.setState({ imgSrc: this.updateImages(this.state.images) })
-    // };
-
-    // updateImages() {
-
+    // unclickEverything = () => {
     // }
+    
+    clickedOn = (charID) => {
+        let b = this.state.spacedChars
+        b.map( b.clicked = false);
+        // this.state.spacedChars.forEach((characterCard) => {
+        //     this.setState({characterCard.state.clickedOn: false})
+        // } )
+        // trying to loop through character array and set clicked on to false   
+        };
+    
+
     render() {
-        const chars =         
+        const chars =      
             this.state.spacedChars.map(char => {
             return <CharProf
                 key={char.key}
                 char={char}
                 gameOver={ () => this.props.gameOver()}
                 shuffle={ () => this.shuffle()}
+                incrementScore={ () => this.props.incrementScore()}
+                clickedOn={ () => this.props.clickedOn()}
             />
         })
 

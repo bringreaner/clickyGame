@@ -10,9 +10,11 @@ class CharProf extends Component {
         if (!this.state.clickedOn) {
             this.setState({clickedOn: true})
             this.props.shuffle();
+            this.props.incrementScore();
         }
         else {
             this.props.gameOver();
+            this.setState({clickedOn: false})
         }
     }
 
@@ -21,7 +23,6 @@ class CharProf extends Component {
             <div className="col-md-3 photo" onClick={this.handleClick}>
                 <img className="character-image" src={this.props.char.image}/>
             </div>
-
         )
     }
 }
